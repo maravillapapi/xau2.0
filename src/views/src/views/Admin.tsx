@@ -270,7 +270,8 @@ export const Rapports: React.FC = () => {
             hrHours && 'RH',
         ].filter(Boolean);
 
-        const typeName = modules.length > 1 ? 'multi' : modules[0]?.toLowerCase() || 'production';
+        // Si c'est une chaine, on met en minuscule, sinon chaine vide
+(variableQuiPoseProbleme || '').toString().toLowerCase();
         const reportName = `Rapport ${modules.join(' & ') || 'Production'} - ${new Date(dateFrom).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}`;
 
         const newReport: Report = {
