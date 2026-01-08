@@ -135,18 +135,17 @@ export const TrendAreaChart: React.FC = () => {
                                 {data.map((_entry, index) => (
                                     <Cell
                                         key={`cell-${index}`}
-                                        fill={
-                                            activeIndex === index
+                                        fill="transparent"
+                                        style={{
+                                            fill: activeIndex === index
                                                 ? 'url(#explosiveViolet)'
                                                 : activeIndex !== null
                                                     ? 'url(#trendDimmedGradient)'
-                                                    : 'url(#trendBarGradient)'
-                                        }
-                                        style={{
+                                                    : 'url(#trendBarGradient)',
                                             filter: activeIndex === index
                                                 ? 'drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.9)) drop-shadow(0px 0px 4px rgba(139, 92, 246, 0.6))'
                                                 : 'none',
-                                            transition: 'fill 0.3s ease-in-out, filter 0.3s ease-in-out',
+                                            transition: 'all 0.4s ease-in-out',
                                         }}
                                     />
                                 ))}

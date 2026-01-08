@@ -122,18 +122,17 @@ export const TeamBarChart: React.FC = () => {
                                 {data.map((_entry: any, index: number) => (
                                     <Cell
                                         key={`cellA-${index}`}
-                                        fill={
-                                            activeIndex === index
+                                        fill="transparent"
+                                        style={{
+                                            fill: activeIndex === index
                                                 ? 'url(#explosiveBlue)'
                                                 : activeIndex !== null
                                                     ? 'url(#teamDimmedGradient)'
-                                                    : 'url(#teamAGradient)'
-                                        }
-                                        style={{
+                                                    : 'url(#teamAGradient)',
                                             filter: activeIndex === index
                                                 ? 'drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.9)) drop-shadow(0px 0px 4px rgba(59, 130, 246, 0.6))'
                                                 : 'none',
-                                            transition: 'fill 0.3s ease-in-out, filter 0.3s ease-in-out',
+                                            transition: 'all 0.4s ease-in-out',
                                         }}
                                     />
                                 ))}
@@ -147,18 +146,17 @@ export const TeamBarChart: React.FC = () => {
                                 {data.map((_entry: any, index: number) => (
                                     <Cell
                                         key={`cellB-${index}`}
-                                        fill={
-                                            activeIndex === index
+                                        fill="transparent"
+                                        style={{
+                                            fill: activeIndex === index
                                                 ? 'url(#explosiveOrangeTeam)'
                                                 : activeIndex !== null
                                                     ? 'url(#teamDimmedGradient)'
-                                                    : 'url(#teamBGradient)'
-                                        }
-                                        style={{
+                                                    : 'url(#teamBGradient)',
                                             filter: activeIndex === index
                                                 ? 'drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.9)) drop-shadow(0px 0px 4px rgba(249, 115, 22, 0.6))'
                                                 : 'none',
-                                            transition: 'fill 0.3s ease-in-out, filter 0.3s ease-in-out',
+                                            transition: 'all 0.4s ease-in-out',
                                         }}
                                     />
                                 ))}

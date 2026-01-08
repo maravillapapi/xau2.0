@@ -113,18 +113,17 @@ export const ProductionAreaChart: React.FC = () => {
                                     {data.map((_entry: any, index: number) => (
                                         <Cell
                                             key={`cell-${index}`}
-                                            fill={
-                                                activeIndex === index
+                                            fill="transparent"
+                                            style={{
+                                                fill: activeIndex === index
                                                     ? 'url(#explosiveOrange)'
                                                     : activeIndex !== null
                                                         ? 'url(#dimmedGradient)'
-                                                        : 'url(#productionBarGradient)'
-                                            }
-                                            style={{
+                                                        : 'url(#productionBarGradient)',
                                                 filter: activeIndex === index
                                                     ? 'drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0px 0px 6px rgba(255, 165, 0, 0.6))'
                                                     : 'none',
-                                                transition: 'all 0.2s ease-out',
+                                                transition: 'all 0.4s ease-in-out',
                                             }}
                                         />
                                     ))}
